@@ -1,12 +1,19 @@
-#include <unistd.h>
+#include <stdio.h>
+/**
+* main - Entry point
+*
+* Description: Prints the alphabet in lowercase, followed by a new line.
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-char letter = a;
-while (letter <= z)
+char letter = 'a';
+while (letter <= 'z')
 {
 putchar(letter);
 letter++;
 }
-putchar(n);
+putchar('\n');  /* Print a newline character after the alphabet */
 return (0);
 }
