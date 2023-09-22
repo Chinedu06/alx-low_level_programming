@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-int main(void)
+int main(void) /* Program generates random number and prints its last digit. */
 {
 int n;
 int lastDigit;
