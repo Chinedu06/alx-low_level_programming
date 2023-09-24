@@ -1,42 +1,36 @@
-#include "main.h"
+#include <stdio.h>
+
+/* Function prototype for _putchar */
+int _putchar(char c);
+
+/* Function prototype for add */
+int add(int num1, int num2);
 
 /**
-* times_table - prints the 9 times table
+* main - check the code
+*
+* Return: Always 0.
 */
-void times_table(void)
+int main(void)
 {
-int row, column, product;
+int n;
 
-for (row = 0; row <= 9; row++)
-{
-for (column = 0; column <= 9; column++)
-{
-product = row * column;
-
-if (column == 0)
-{
-_putchar(product + '0');
-}
-else
-{
-_putchar(' ');
-if (product >= 10)
-{
-_putchar(product / 10 + '0');
-_putchar(product % 10 + '0');
-}
-else
-{
-_putchar(' ');
-_putchar(product + '0');
-}
+n = add(89, 9);
+_putchar(n + '0');  /* Print the result using _putchar */
+_putchar('\n');     /* Print a newline character */
+return (0);
 }
 
-if (column < 9)
+/**
+* add - adds two integers
+* @num1: The first integer
+* @num2: The second integer
+*
+* Return: The sum of num1 and num2.
+*/
+int add(int num1, int num2)
 {
-_putchar(',');
+return (num1 + num2);
 }
-}
-_putchar('\n');
-}
-}
+
+/* _putchar implementation can be placed here if needed */
