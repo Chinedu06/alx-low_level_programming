@@ -1,17 +1,8 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c);
-
-/**
- * print_number - prints an integer using _putchar
- * @n: the integer to print
+ * print_number - prints an integer
+ * @n: integer to print
  */
 void print_number(int n)
 {
@@ -20,20 +11,17 @@ void print_number(int n)
 		_putchar('-');
 		n = -n;
 	}
-
 	if (n / 10)
+	{
 		print_number(n / 10);
-
-	_putchar(n % 10 + '0');
+	}
+	_putchar((n % 10) + '0');
 }
 
 /**
- * main - prints the numbers from 1 to 100, followed by a new line.
- * But for multiples of three print Fizz instead of the number and
- * for the multiples of five print Buzz. For numbers which are multiples
- * of both three and five print FizzBuzz.
+ * main - Entry point
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 int main(void)
 {
@@ -70,10 +58,9 @@ int main(void)
 		{
 			print_number(i);
 		}
-
-		if (i < 100)
+		if (i != 100)
 		{
-			_putchar(' ');
+			_putchar(' ')
 		}
 	}
 	_putchar('\n');
