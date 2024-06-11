@@ -13,6 +13,7 @@ int main(void)
 	int sum = 0;
 	char password[100];
 	int i = 0;
+	int j;
 	int rand_char;
 
 	srand(time(NULL));
@@ -27,10 +28,11 @@ int main(void)
 	password[i] = 2772 - sum; /* ensures the sum of ASCII values equals 2772 */
 	password[i + 1] = '\0';
 
-	for (int j = 0; j <= i; j++)
+	for (j = 0; j <= i; j++)
 	{
 		_putchar(password[j]);
 	}
+
 	return (0);
 }
 
