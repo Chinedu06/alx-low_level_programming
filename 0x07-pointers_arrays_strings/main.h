@@ -83,15 +83,16 @@ void print_diagsums(int *a, int size);
  * Description: This function sets the value of `*s` to point to the same
  *              location as `to`.
  */
-void set_string(char **s, char *to);
 
 /**
- * _putchar - writes a character to stdout
- * @c: the character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * set_string - Sets the value of a pointer to a char.
+ * @s: Pointer to pointer to set
+ * @to: Pointer to set `s` to
  */
+void set_string(char **s, char *to)
+{
+    *s = to;
+}
 int _putchar(char c);
 
 #endif /* MAIN_H */
