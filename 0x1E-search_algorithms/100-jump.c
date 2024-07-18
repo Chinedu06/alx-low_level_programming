@@ -18,15 +18,12 @@ int jump_search(int *array, size_t size, int value)
 
 	if (array == NULL || size == 0)
 		return (-1);
-
 	/* Approximate the square root of size */
 	sqrt_size = 1;
 	while (sqrt_size * sqrt_size < size)
 		sqrt_size++;
-
 	step = sqrt_size;
 	prev = 0;
-
 	while (array[prev] < value)
 	{
 		printf("Value checked array[%lu] = [%d]\n", prev, array[prev]);
