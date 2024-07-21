@@ -1,5 +1,5 @@
+#include "../search_algos.h"
 #include <stdlib.h>
-#include "search_algos.h"
 
 /**
  * free_skiplist - Frees a skip list
@@ -7,13 +7,13 @@
  */
 void free_skiplist(skiplist_t *list)
 {
-    skiplist_t *node;
+	skiplist_t *node;
 
-    while (list)
-    {
-        node = list->next;
-        free(list);
-        list = node;
-    }
+	while (list)
+	{
+		node = list->next;
+		free(list);
+		list = node;
+	}
 }
 

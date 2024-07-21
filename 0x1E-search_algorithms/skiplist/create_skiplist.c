@@ -1,6 +1,6 @@
+#include "../search_algos.h"
 #include <stdlib.h>
 #include <math.h>
-#include "search_algos.h"
 
 /**
  * create_skiplist - Creates a skip list from an array of integers
@@ -11,34 +11,34 @@
  */
 skiplist_t *create_skiplist(int *array, size_t size)
 {
-    skiplist_t *head = NULL, *node, *prev;
-    size_t i, express_interval;
+	skiplist_t *head = NULL, *node, *prev;
+	size_t i, express_interval;
 
-    if (array == NULL || size == 0)
-        return (NULL);
+	if (array == NULL || size == 0)
+		return (NULL);
 
-    express_interval = sqrt(size);
-    for (i = 0; i < size; i++)
-    {
-        node = malloc(sizeof(skiplist_t));
-        if (node == NULL)
-        {
-            free_skiplist(head);
-            return (NULL);
-        }
-        node->n = array[i];
-        node->index = i;
-        node->next = NULL;
-        node->express = NULL;
-        if (i % express_interval == 0 && i != 0)
-            prev->express = node;
-        if (head == NULL)
-            head = node;
-        else
-            prev->next = node;
-        prev = node;
-    }
+	express_interval = sqrt(size);
+	for (i = 0; i < size; i++)
+	{
+		node = malloc(sizeof(skiplist_t));
+		if (node == NULL)
+		{
+			free_skiplist(head);
+			return (NULL);
+		}
+		node->n = array[i];
+		node->index = i;
+		node->next = NULL;
+		node->express = NULL;
+		if (i % express_interval == 0 && i != 0)
+			prev->express = node;
+		if (head == NULL)
+			head = node;
+		else
+			prev->next = node;
+		prev = node;
+	}
 
-    return (head);
+	return (head);
 }
 
